@@ -211,7 +211,7 @@ nav ul li .arrow-icon.on {
   }
   #content-wrapper nav ul li a {
     display: none;
-    font-size: 16px;
+    font-size: 14px;
   }
   #content-wrapper nav ul li .arrow-icon {
     display: none;
@@ -243,6 +243,9 @@ nav ul li .arrow-icon.on {
     max-width: 100%;
     border-top: 1px solid #ebebeb;
     text-align: center;
+  }
+  #content-wrapper nav ul li a {
+    display: block;
   }
   #content-wrapper nav .mobile-menu {
     display: -webkit-box;
