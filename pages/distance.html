@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Surveyor Desk</title>
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="/surveyorDesk/styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +16,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
     />
-    <script src="scripts/clickHandlers.js" type="module" defer></script>
+    <script
+      src="/surveyorDesk/scripts/clickHandlers.js"
+      type="module"
+      defer
+    ></script>
   </head>
   <body>
     <header id="top-bar">
       <h1>
-        <i class="bi bi-compass"></i><a href="index.html">Surveyor Desk</a>
+        <i class="bi bi-compass"></i
+        ><a href="/surveyorDesk/index.html">Surveyor Desk</a>
       </h1>
     </header>
     <div id="content-wrapper">
@@ -35,13 +40,12 @@
             </div>
             <div class="item-content">
               <ul class="calc-list">
-                <a href="pages/azimuth.html"
+                <a href="/surveyorDesk/pages/azimuth.html"
                   ><li>Azymut na podstawie dwóch punktów</li></a
                 >
-                <a href="pages/distance.html"
+                <a href="distance.html"
                   ><li>Długość odcinka ze współrzędnych</li></a
                 >
-                <a href="#"><li>Kąt poziomy ze współrzędnych</li></a>
               </ul>
             </div>
           </li>
@@ -50,18 +54,42 @@
             ><a href="#transformation">Transformacja układów</a>
           </li>
           <li>
+            <i class="bi bi-percent"></i
+            ><a href="/surveyorDesk/pages/angles-calc.html"
+              >Zamiana miar kątowych</a
+            >
+          </li>
+          <li>
             <i class="bi bi-bullseye"></i><a href="#points">Baza punktów</a>
           </li>
           <li>
             <i class="bi bi-plus"></i
-            ><a href="pages/add-point.html">Dodaj punkt</a>
+            ><a href="/surveyorDesk/pages/add-point.html">Dodaj punkt</a>
           </li>
         </ul>
       </nav>
       <div class="display-area">
-        <section id="about-project">
-          <h2>Witaj w aplikacji Surveyor Desk</h2>
-          <p>Tekst o aplikacji, czym jest, dlaczego ją stworzyłem.</p>
+        <section id="distance">
+          <h2>Długość odcinka ze współrzędnych</h2>
+          <div class="points-details">
+            <div class="first-point-details">
+              <label for="point-name">Nazwa punktu A</label
+              ><input type="number" id="point-name" />
+              <label for="x-cord">Współrzędna X</label
+              ><input type="number" id="x-cord" />
+              <label for="y-cord">Współrzędna Y</label
+              ><input type="number" id="y-cord" />
+            </div>
+            <div class="second-point-details">
+              <label for="point-name">Nazwa punktu B</label
+              ><input type="number" id="point-name" />
+              <label for="x-cord">Współrzędna X</label
+              ><input type="number" id="x-cord" />
+              <label for="y-cord">Współrzędna Y</label
+              ><input type="number" id="y-cord" />
+            </div>
+          </div>
+          <button>OBLICZ</button>
         </section>
       </div>
     </div>
