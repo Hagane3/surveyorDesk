@@ -146,6 +146,7 @@ nav ul li .arrow-icon.on {
 .display-area {
   width: 100%;
   min-width: 400px;
+  overflow: scroll;
 }
 
 #content-wrapper {
@@ -392,6 +393,23 @@ nav ul li .arrow-icon.on {
   }
 }
 
+#add-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
 #add-point h2 {
   text-align: center;
   margin-top: 3rem;
@@ -425,7 +443,7 @@ nav ul li .arrow-icon.on {
   width: 400px;
 }
 
-#add-point .point-details button#add-point {
+#add-point .point-details button#add-point-btn {
   margin-top: 3rem;
   height: 30px;
   width: 200px;
@@ -569,5 +587,44 @@ nav ul li .arrow-icon.on {
 
 #angles-calc .angles-details button {
   margin-top: 2rem;
+}
+
+#points-base-header {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#points-base {
+  text-align: center;
+}
+
+#points-base .points-list {
+  width: 100%;
+}
+
+#points-base .points-list table {
+  margin: 2rem auto 0 auto;
+  width: 98%;
+  border: 1px solid gray;
+  margin-bottom: 3rem;
+}
+
+#points-base .points-list table th {
+  padding: 0.5rem 0;
+}
+
+#points-base .points-list table th:nth-last-child(2) {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+#points-base .points-list table td {
+  border-top: 1px solid gray;
+  padding: 0.5rem 0;
+}
+
+#points-base .points-list table td:nth-last-child(2) {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
 }
 /*# sourceMappingURL=main.css.map */

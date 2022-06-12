@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
     />
-    <script src="scripts/clickHandlers.js" type="module" defer></script>
+    <script src="scripts/menu.js" type="module" defer></script>
   </head>
   <body>
     <header id="top-bar">
@@ -35,13 +35,12 @@
             </div>
             <div class="item-content">
               <ul class="calc-list">
-                <a href="pages/azimuth.html"
+                <a href="/surveyorDesk/pages/azimuth.html"
                   ><li>Azymut na podstawie dwóch punktów</li></a
                 >
-                <a href="pages/distance.html"
+                <a href="/surveyorDesk/pages/distance.html"
                   ><li>Długość odcinka ze współrzędnych</li></a
                 >
-                <a href="#"><li>Kąt poziomy ze współrzędnych</li></a>
               </ul>
             </div>
           </li>
@@ -50,11 +49,18 @@
             ><a href="#transformation">Transformacja układów</a>
           </li>
           <li>
-            <i class="bi bi-bullseye"></i><a href="#points">Baza punktów</a>
+            <i class="bi bi-percent"></i
+            ><a href="/surveyorDesk/pages/angles-calc.html"
+              >Zamiana miar kątowych</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-bullseye"></i
+            ><a href="/surveyorDesk/pages/points-base.html">Baza punktów</a>
           </li>
           <li>
             <i class="bi bi-plus"></i
-            ><a href="pages/add-point.html">Dodaj punkt</a>
+            ><a href="/surveyorDesk/pages/add-point.html">Dodaj punkt</a>
           </li>
         </ul>
       </nav>
