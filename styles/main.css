@@ -566,6 +566,12 @@ nav ul li .arrow-icon.on {
           justify-content: center;
 }
 
+#angles-calc .angles-details .result {
+  margin-top: 3rem;
+  font-size: 20px;
+  color: green;
+}
+
 #angles-calc .angles-details .angle-choice {
   text-align: center;
   margin-bottom: 3rem;
