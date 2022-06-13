@@ -9,8 +9,28 @@ function degreesToRadians(value) {
 }
 
 function radiansToDegrees(value) {
-  const radians = (value * 360) / (2 * Math.PI);
+  const degrees = (value * 360) / (2 * Math.PI);
+  return degrees;
+}
+
+function degreesToGrads(value) {
+  const grads = (value * 400) / 360;
+  return grads;
+}
+
+function gradsToDegrees(value) {
+  const degrees = (value * 360) / 400;
+  return degrees;
+}
+
+function gradsToRadians(value) {
+  const radians = (value * 2 * Math.PI) / 400;
   return radians;
+}
+
+function radiansToGrads(value) {
+  const grads = (value * 200) / Math.PI;
+  return grads;
 }
 
 function createResult(result) {
@@ -34,6 +54,18 @@ function renderResult() {
   } else if (selectFrom == "radians" && selectTo == "degrees") {
     const result = radiansToDegrees(input.value);
     createResult(result);
+  } else if (selectFrom == "degrees" && selectTo == "grads") {
+    const result = degreesToGrads(input.value);
+    createResult(result);
+  } else if (selectFrom == "grads" && selectTo == "degrees") {
+    const result = gradsToDegrees(input.value);
+    createResult(result);
+  } else if (selectFrom == "grads" && selectTo == "radians") {
+    const result = gradsToRadians(input.value);
+    createResult(result);
+  } else if (selectFrom == "radians" && selectTo == "grads") {
+    const result = radiansToGrads(input.value);
+    createResult(result);
   } else if (
     (selectFrom == "radians" && selectTo == "radians") ||
     (selectFrom == "degrees" && selectTo == "degrees") ||
@@ -44,5 +76,3 @@ function renderResult() {
 }
 
 calcBtn.addEventListener("click", renderResult);
-
-// POZOSTAŁO DODAĆ RESZTĘ KALKULACJI!!!!
