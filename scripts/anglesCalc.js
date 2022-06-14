@@ -48,31 +48,23 @@ function createResult(result) {
 function renderResult() {
   const selectFrom = document.getElementById("calc-from").value;
   const selectTo = document.getElementById("calc-to").value;
+  let result;
   if (selectFrom == "degrees" && selectTo == "radians") {
-    const result = degreesToRadians(input.value);
-    createResult(result);
+    result = degreesToRadians(input.value);
   } else if (selectFrom == "radians" && selectTo == "degrees") {
-    const result = radiansToDegrees(input.value);
-    createResult(result);
+    result = radiansToDegrees(input.value);
   } else if (selectFrom == "degrees" && selectTo == "grads") {
-    const result = degreesToGrads(input.value);
-    createResult(result);
+    result = degreesToGrads(input.value);
   } else if (selectFrom == "grads" && selectTo == "degrees") {
-    const result = gradsToDegrees(input.value);
-    createResult(result);
+    result = gradsToDegrees(input.value);
   } else if (selectFrom == "grads" && selectTo == "radians") {
-    const result = gradsToRadians(input.value);
-    createResult(result);
+    result = gradsToRadians(input.value);
   } else if (selectFrom == "radians" && selectTo == "grads") {
-    const result = radiansToGrads(input.value);
-    createResult(result);
-  } else if (
-    (selectFrom == "radians" && selectTo == "radians") ||
-    (selectFrom == "degrees" && selectTo == "degrees") ||
-    (selectFrom == "grads" && selectTo == "grads")
-  ) {
+    result = radiansToGrads(input.value);
+  } else if (selectFrom == selectTo) {
     alert("Nie możesz przekonwertować tych samych miar!");
   }
+  createResult(result);
 }
 
 calcBtn.addEventListener("click", renderResult);

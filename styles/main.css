@@ -527,6 +527,11 @@ nav ul li .arrow-icon.on {
   width: 120px;
 }
 
+#azimuth .result,
+#distance .result {
+  margin-top: 3rem;
+}
+
 #angles-calc {
   height: 100%;
   display: -webkit-box;
