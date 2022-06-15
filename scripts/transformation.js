@@ -10,13 +10,13 @@ function createResult(result) {
     const resultInfo = document.createElement("p");
     const section = document.querySelector(".transformation-details");
     resultInfo.classList.add("result");
-    resultInfo.textContent = `B: ${result.y}, L: ${result.x}`;
+    resultInfo.textContent = `B:  ${result.y}, L:  ${result.x}`;
     section.appendChild(resultInfo);
     flag = 1;
   } else {
     document.querySelector(
       ".result"
-    ).textContent = `B: ${result.y}, L: ${result.x}`;
+    ).textContent = `B:  ${result.y}, L:  ${result.x}`;
   }
 }
 
