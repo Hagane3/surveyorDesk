@@ -16,8 +16,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
     />
-    <script src="/surveyorDesk/scripts/menu.js" defer></script>
-    <script src="/surveyorDesk/scripts/calculation.js" defer></script>
+    <script src="/surveyorDesk/scripts/menu.js" type="module" defer></script>
+    <script src="/surveyorDesk/scripts/transformation.js" defer></script>
   </head>
   <body>
     <header id="top-bar">
@@ -69,27 +69,30 @@
         </ul>
       </nav>
       <div class="display-area">
-        <section id="distance">
-          <h2>Długość odcinka ze współrzędnych</h2>
-          <div class="points-details">
-            <div class="first-point-details">
-              <label for="point-name">Nazwa punktu A</label
-              ><input type="number" id="point-name" />
-              <label for="x-cord">Współrzędna X</label
-              ><input type="number" id="x-coord" />
-              <label for="y-cord">Współrzędna Y</label
-              ><input type="number" id="y-coord" />
+        <section id="transformation">
+          <h2>Transformacja układów</h2>
+          <div class="transformation-details">
+            <div class="transformation-choice">
+              <select id="calc-from">
+                <option value="1992">Układ 1992</option>
+              </select>
+              <span>=></span>
+              <select id="calc-to">
+                <option value="radians">WGS84</option>
+              </select>
             </div>
-            <div class="second-point-details">
-              <label for="point-name">Nazwa punktu B</label
-              ><input type="number" id="point-name" />
-              <label for="x-cord">Współrzędna X</label
-              ><input type="number" id="x-coord" />
-              <label for="y-cord">Współrzędna Y</label
-              ><input type="number" id="y-coord" />
+            <div class="coord-input">
+              <div class="coord-x">
+                <label for="coord">Współrzędna X</label
+                ><input type="number" id="coordX" />
+              </div>
+              <div class="coord-y">
+                <label for="coord">Współrzędna Y</label
+                ><input type="number" id="coordY" />
+              </div>
             </div>
+            <button id="calc-btn">OBLICZ</button>
           </div>
-          <button id="distance-btn">OBLICZ</button>
         </section>
       </div>
     </div>

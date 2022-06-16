@@ -11,6 +11,8 @@ const coordXB = secondPoint.querySelector("#x-coord");
 
 const coordYA = firstPoint.querySelector("#y-coord");
 const coordYB = secondPoint.querySelector("#y-coord");
+
+const inputs = document.querySelectorAll("input");
 let flag = 0;
 
 function createResult(result, sectionName, unit, fixed) {
@@ -61,6 +63,12 @@ function calcAzimuth() {
 }
 
 calcBtn.addEventListener("click", () => {
+  for (let input of inputs) {
+    if (input.value === "") {
+      alert("Proszę uzupełnić wszystkie pola!");
+      return;
+    }
+  }
   if (calcBtn.id == "distance-btn") {
     calcDistance();
   } else if (calcBtn.id == "azimuth") {

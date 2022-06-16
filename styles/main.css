@@ -327,13 +327,15 @@ nav ul li .arrow-icon.on {
   #content-wrapper .display-area #azimuth,
   #content-wrapper .display-area #distance,
   #content-wrapper .display-area #add-point,
-  #content-wrapper .display-area #angles-calc {
+  #content-wrapper .display-area #angles-calc,
+  #content-wrapper .display-area #transformation {
     height: auto;
   }
   #content-wrapper .display-area #azimuth h2,
   #content-wrapper .display-area #distance h2,
   #content-wrapper .display-area #add-point h2,
-  #content-wrapper .display-area #angles-calc h2 {
+  #content-wrapper .display-area #angles-calc h2,
+  #content-wrapper .display-area #transformation h2 {
     text-align: center;
     font-size: 1.3rem;
     margin-top: 2rem;
@@ -342,29 +344,65 @@ nav ul li .arrow-icon.on {
   #content-wrapper .display-area #azimuth button,
   #content-wrapper .display-area #distance button,
   #content-wrapper .display-area #add-point button,
-  #content-wrapper .display-area #angles-calc button {
+  #content-wrapper .display-area #angles-calc button,
+  #content-wrapper .display-area #transformation button {
     margin-bottom: 2rem;
   }
   #content-wrapper .display-area #azimuth input,
   #content-wrapper .display-area #distance input,
   #content-wrapper .display-area #add-point input,
-  #content-wrapper .display-area #angles-calc input {
+  #content-wrapper .display-area #angles-calc input,
+  #content-wrapper .display-area #transformation input {
     width: 250px;
   }
   #content-wrapper .display-area #azimuth .points-details,
+  #content-wrapper .display-area #azimuth .transformation-details,
   #content-wrapper .display-area #distance .points-details,
+  #content-wrapper .display-area #distance .transformation-details,
   #content-wrapper .display-area #add-point .points-details,
-  #content-wrapper .display-area #angles-calc .points-details {
+  #content-wrapper .display-area #add-point .transformation-details,
+  #content-wrapper .display-area #angles-calc .points-details,
+  #content-wrapper .display-area #angles-calc .transformation-details,
+  #content-wrapper .display-area #transformation .points-details,
+  #content-wrapper .display-area #transformation .transformation-details {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   #content-wrapper .display-area #azimuth .points-details .second-point-details,
+  #content-wrapper .display-area #azimuth .transformation-details .second-point-details,
   #content-wrapper .display-area #distance .points-details .second-point-details,
+  #content-wrapper .display-area #distance .transformation-details .second-point-details,
   #content-wrapper .display-area #add-point .points-details .second-point-details,
-  #content-wrapper .display-area #angles-calc .points-details .second-point-details {
+  #content-wrapper .display-area #add-point .transformation-details .second-point-details,
+  #content-wrapper .display-area #angles-calc .points-details .second-point-details,
+  #content-wrapper .display-area #angles-calc .transformation-details .second-point-details,
+  #content-wrapper .display-area #transformation .points-details .second-point-details,
+  #content-wrapper .display-area #transformation .transformation-details .second-point-details {
     margin-top: 3rem;
+  }
+  #content-wrapper .display-area #azimuth .coord-input,
+  #content-wrapper .display-area #distance .coord-input,
+  #content-wrapper .display-area #add-point .coord-input,
+  #content-wrapper .display-area #angles-calc .coord-input,
+  #content-wrapper .display-area #transformation .coord-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #content-wrapper .display-area #azimuth .coord-input .coord-x,
+  #content-wrapper .display-area #azimuth .coord-input .coord-y,
+  #content-wrapper .display-area #distance .coord-input .coord-x,
+  #content-wrapper .display-area #distance .coord-input .coord-y,
+  #content-wrapper .display-area #add-point .coord-input .coord-x,
+  #content-wrapper .display-area #add-point .coord-input .coord-y,
+  #content-wrapper .display-area #angles-calc .coord-input .coord-x,
+  #content-wrapper .display-area #angles-calc .coord-input .coord-y,
+  #content-wrapper .display-area #transformation .coord-input .coord-x,
+  #content-wrapper .display-area #transformation .coord-input .coord-y {
+    margin: 1rem 0;
   }
 }
 
@@ -529,10 +567,11 @@ nav ul li .arrow-icon.on {
 
 #azimuth .result,
 #distance .result {
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
-#angles-calc {
+#angles-calc,
+#transformation {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,11 +590,49 @@ nav ul li .arrow-icon.on {
   overflow: scroll;
 }
 
-#angles-calc h2 {
+#angles-calc h2,
+#transformation h2 {
   margin-bottom: 3rem;
 }
 
-#angles-calc .angles-details {
+#angles-calc .coord-input,
+#transformation .coord-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#angles-calc .coord-input .coord-x,
+#angles-calc .coord-input .coord-y,
+#transformation .coord-input .coord-x,
+#transformation .coord-input .coord-y {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 2rem;
+}
+
+#angles-calc .coord-input .coord-x input,
+#angles-calc .coord-input .coord-y input,
+#transformation .coord-input .coord-x input,
+#transformation .coord-input .coord-y input {
+  margin-top: 1rem;
+}
+
+#angles-calc .angles-details,
+#angles-calc .transformation-details,
+#transformation .angles-details,
+#transformation .transformation-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,33 +648,61 @@ nav ul li .arrow-icon.on {
           justify-content: center;
 }
 
-#angles-calc .angles-details .result {
-  margin-top: 3rem;
-  font-size: 20px;
+#angles-calc .angles-details .result,
+#angles-calc .transformation-details .result,
+#transformation .angles-details .result,
+#transformation .transformation-details .result {
+  text-align: center;
+  margin: 3rem 0.8rem;
+  font-size: 18px;
   color: green;
 }
 
-#angles-calc .angles-details .angle-choice {
+#angles-calc .angles-details .angle-choice,
+#angles-calc .angles-details .transformation-choice,
+#angles-calc .transformation-details .angle-choice,
+#angles-calc .transformation-details .transformation-choice,
+#transformation .angles-details .angle-choice,
+#transformation .angles-details .transformation-choice,
+#transformation .transformation-details .angle-choice,
+#transformation .transformation-details .transformation-choice {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-#angles-calc .angles-details .angle-choice span {
+#angles-calc .angles-details .angle-choice span,
+#angles-calc .angles-details .transformation-choice span,
+#angles-calc .transformation-details .angle-choice span,
+#angles-calc .transformation-details .transformation-choice span,
+#transformation .angles-details .angle-choice span,
+#transformation .angles-details .transformation-choice span,
+#transformation .transformation-details .angle-choice span,
+#transformation .transformation-details .transformation-choice span {
   margin: 0 1rem;
 }
 
-#angles-calc .angles-details label {
+#angles-calc .angles-details label,
+#angles-calc .transformation-details label,
+#transformation .angles-details label,
+#transformation .transformation-details label {
   display: block;
   margin-bottom: 1rem;
 }
 
-#angles-calc .angles-details input {
+#angles-calc .angles-details input,
+#angles-calc .transformation-details input,
+#transformation .angles-details input,
+#transformation .transformation-details input {
   height: 30px;
   width: 250px;
 }
 
-#angles-calc .angles-details button {
+#angles-calc .angles-details button,
+#angles-calc .transformation-details button,
+#transformation .angles-details button,
+#transformation .transformation-details button {
   margin-top: 2rem;
+  padding: 0.5rem;
 }
 
 #points-base-header {
