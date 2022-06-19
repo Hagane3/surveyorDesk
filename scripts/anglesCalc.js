@@ -5,27 +5,27 @@ let flag = 0;
 
 function degreesToRadians(value) {
   const radians = (value * Math.PI) / 180;
-  return radians;
+  return radians.toFixed(5);
 }
 
 function radiansToDegrees(value) {
   const degrees = (value * 360) / (2 * Math.PI);
-  return degrees;
+  return degrees.toFixed(2);
 }
 
 function degreesToGrads(value) {
   const grads = (value * 400) / 360;
-  return grads;
+  return grads.toFixed(4);
 }
 
 function gradsToDegrees(value) {
   const degrees = (value * 360) / 400;
-  return degrees;
+  return degrees.toFixed(2);
 }
 
 function gradsToRadians(value) {
   const radians = (value * 2 * Math.PI) / 400;
-  return radians;
+  return radians.toFixed(5);
 }
 
 function radiansToGrads(value) {
