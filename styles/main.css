@@ -726,6 +726,7 @@ nav ul li .arrow-icon.on {
 }
 
 #points-base .points-list table th {
+  background-color: #e3e3e3;
   padding: 0.5rem 0;
 }
 
@@ -742,5 +743,9 @@ nav ul li .arrow-icon.on {
 #points-base .points-list table td:nth-last-child(2) {
   border-left: 1px solid gray;
   border-right: 1px solid gray;
+}
+
+#points-base .points-list table tr:hover {
+  background-color: #e3e3e3;
 }
 /*# sourceMappingURL=main.css.map */
