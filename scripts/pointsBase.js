@@ -7,8 +7,10 @@ function renderList() {
   points.forEach((point) => {
     const pointBody = document.importNode(pointTemplate.content, true);
     pointBody.getElementById("point-name").textContent = point.name;
-    pointBody.getElementById("coord-x").textContent = point.coordX;
-    pointBody.getElementById("coord-y").textContent = point.coordY;
+    const coordX = parseFloat(point.coordX).toFixed(2);
+    const coordY = parseFloat(point.coordY).toFixed(2);
+    pointBody.getElementById("coord-x").textContent = coordX;
+    pointBody.getElementById("coord-y").textContent = coordY;
     pointsList.appendChild(pointBody);
   });
 }
