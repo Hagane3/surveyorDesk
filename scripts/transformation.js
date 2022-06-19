@@ -24,14 +24,17 @@ async function getCOORDS() {
   if (coordX.value === "" || coordY.value === "") {
     alert("Pola nie mogą być puste!");
   } else {
-    await fetch(
-      `https://epsg.io/trans?x=${coordY.value}&y=${coordX.value}&z=0&s_srs=2180&t_srs=4326`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const coords = data;
-        createResult(data);
-      });
+    try {
+      await fetch(
+        `https://epsg.io/trans?x=${coordY.value}&y=${coordX.value}&z=0&s_srs=2180&t_srs=4326`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          createResult(data);
+        });
+    } catch (err) {
+      alert(err);
+    }
   }
 }
 
