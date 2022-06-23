@@ -1,0 +1,63 @@
+#angles-calc,
+#transformation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: scroll;
+  h2 {
+    margin-bottom: 3rem;
+  }
+
+  .coord-input {
+    display: flex;
+    .coord-x,
+    .coord-y {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem 2rem;
+      input {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .angles-details,
+  .transformation-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .result {
+      text-align: center;
+      margin: 3rem 0.8rem;
+      font-size: 18px;
+      color: green;
+    }
+
+    .angle-choice,
+    .transformation-choice {
+      text-align: center;
+      margin-bottom: 3rem;
+      span {
+        margin: 0 1rem;
+      }
+    }
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input {
+      height: 30px;
+      width: 250px;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.5rem;
+    }
+  }
+}

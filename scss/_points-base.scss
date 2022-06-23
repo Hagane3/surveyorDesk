@@ -1,0 +1,38 @@
+#points-base-header {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#points-base {
+  text-align: center;
+  .points-list {
+    width: 100%;
+    table {
+      margin: 2rem auto 0 auto;
+      width: 98%;
+      border: 1px solid gray;
+      margin-bottom: 3rem;
+      th {
+        background-color: rgb(227, 227, 227);
+        padding: 0.5rem 0;
+      }
+      th:nth-last-child(2) {
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+      }
+      td {
+        border-top: 1px solid gray;
+        padding: 0.5rem 0;
+      }
+      td:nth-last-child(2) {
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+      }
+      tr {
+        &:hover {
+          background-color: rgb(227, 227, 227);
+        }
+      }
+    }
+  }
+}

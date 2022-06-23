@@ -1,0 +1,15 @@
+#about-project {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  h2 {
+    color: $primary-font-color;
+  }
+  p {
+    color: $primary-font-color;
+  }
+}

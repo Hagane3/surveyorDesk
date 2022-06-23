@@ -1,0 +1,751 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+#top-bar {
+  width: 100%;
+  height: 70px;
+  background-color: #393b40;
+}
+
+#top-bar h1 {
+  padding: 1rem 0 0 3rem;
+}
+
+#top-bar h1 i {
+  margin-right: 1rem;
+  color: #f48a00;
+}
+
+#top-bar h1 a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+#top-bar h1 a:hover {
+  color: #f48a00;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #393b40;
+  min-width: 300px;
+  width: 30%;
+  max-width: 300px;
+  border-top: 2px solid white;
+  height: calc(100vh - 70px);
+}
+
+nav i.bi-list {
+  display: none;
+}
+
+nav ul {
+  margin-top: 5rem;
+}
+
+nav ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  list-style-type: none;
+  margin: 1.2rem auto;
+}
+
+nav ul li.list-extendable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+nav ul li.list-extendable .item-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav ul li.list-extendable .item-content {
+  display: none;
+}
+
+nav ul li.list-extendable .item-content.on {
+  display: inline;
+}
+
+nav ul li.list-extendable .item-content .calc-list {
+  margin-top: 0;
+  color: #ffff;
+}
+
+nav ul li.list-extendable .item-content .calc-list li:hover {
+  color: #f48a00;
+}
+
+nav ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffff;
+}
+
+nav ul li a:hover {
+  color: #f48a00;
+}
+
+nav ul li i {
+  margin-right: 0.5rem;
+  font-size: 30px;
+  color: #ffff;
+}
+
+nav ul li .arrow-icon {
+  position: absolute;
+  font-size: 20px;
+  right: 5%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav ul li .arrow-icon.on {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.display-area {
+  width: 100%;
+  min-width: 400px;
+  overflow: scroll;
+}
+
+#content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
+#about-project {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+
+#about-project h2 {
+  color: #424242;
+}
+
+#about-project p {
+  color: #424242;
+}
+
+@media (max-width: 1100px) {
+  #top-bar {
+    min-width: 100px;
+  }
+  #top-bar h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding: 0;
+  }
+  #content-wrapper {
+    min-width: 100px;
+  }
+  #content-wrapper nav {
+    width: auto;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+  }
+  #content-wrapper nav ul {
+    padding: 0 1rem;
+  }
+  #content-wrapper nav ul li a {
+    display: none;
+    font-size: 14px;
+  }
+  #content-wrapper nav ul li .arrow-icon {
+    display: none;
+  }
+  #content-wrapper nav:hover {
+    min-width: 30%;
+  }
+  #content-wrapper nav:hover a {
+    display: block;
+  }
+  #content-wrapper nav:hover .arrow-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  #content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #content-wrapper nav {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid #ebebeb;
+    text-align: center;
+  }
+  #content-wrapper nav ul li a {
+    display: block;
+  }
+  #content-wrapper nav ul li i {
+    font-size: 12px;
+  }
+  #content-wrapper nav .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  #content-wrapper nav .mobile-menu li {
+    display: block;
+    margin: 0.2rem auto;
+  }
+  #content-wrapper nav .mobile-menu li:last-child {
+    margin-bottom: 1rem;
+  }
+  #content-wrapper nav .mobile-menu li.list-extendable .item-head {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #content-wrapper nav .mobile-menu li.list-extendable .item-head .arrow-icon {
+    display: block;
+  }
+  #content-wrapper nav .mobile-menu li.list-extendable .item-content.on {
+    display: block;
+  }
+  #content-wrapper nav .mobile-menu li.list-extendable .item-content.on .calc-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  #content-wrapper nav .mobile-menu li.list-extendable .item-content.on .calc-list li {
+    font-size: 12px;
+    text-align: center;
+  }
+  #content-wrapper nav .mobile-menu li.list-extendable a {
+    display: block;
+  }
+  #content-wrapper nav .mobile-menu li.list-extendable i {
+    display: none;
+  }
+  #content-wrapper nav .bi-list {
+    display: inline;
+    font-size: 30px;
+    color: #ffff;
+  }
+  #content-wrapper nav i {
+    display: none;
+  }
+  #content-wrapper nav ul {
+    display: none;
+  }
+  #content-wrapper .display-area {
+    height: 100%;
+    min-width: 100%;
+  }
+  #content-wrapper .display-area #azimuth,
+  #content-wrapper .display-area #distance,
+  #content-wrapper .display-area #add-point,
+  #content-wrapper .display-area #angles-calc,
+  #content-wrapper .display-area #transformation {
+    height: auto;
+  }
+  #content-wrapper .display-area #azimuth h2,
+  #content-wrapper .display-area #distance h2,
+  #content-wrapper .display-area #add-point h2,
+  #content-wrapper .display-area #angles-calc h2,
+  #content-wrapper .display-area #transformation h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    padding: 0 0.8rem;
+  }
+  #content-wrapper .display-area #azimuth button,
+  #content-wrapper .display-area #distance button,
+  #content-wrapper .display-area #add-point button,
+  #content-wrapper .display-area #angles-calc button,
+  #content-wrapper .display-area #transformation button {
+    margin-bottom: 2rem;
+  }
+  #content-wrapper .display-area #azimuth input,
+  #content-wrapper .display-area #distance input,
+  #content-wrapper .display-area #add-point input,
+  #content-wrapper .display-area #angles-calc input,
+  #content-wrapper .display-area #transformation input {
+    width: 250px;
+  }
+  #content-wrapper .display-area #azimuth .points-details,
+  #content-wrapper .display-area #azimuth .transformation-details,
+  #content-wrapper .display-area #distance .points-details,
+  #content-wrapper .display-area #distance .transformation-details,
+  #content-wrapper .display-area #add-point .points-details,
+  #content-wrapper .display-area #add-point .transformation-details,
+  #content-wrapper .display-area #angles-calc .points-details,
+  #content-wrapper .display-area #angles-calc .transformation-details,
+  #content-wrapper .display-area #transformation .points-details,
+  #content-wrapper .display-area #transformation .transformation-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #content-wrapper .display-area #azimuth .points-details .second-point-details,
+  #content-wrapper .display-area #azimuth .transformation-details .second-point-details,
+  #content-wrapper .display-area #distance .points-details .second-point-details,
+  #content-wrapper .display-area #distance .transformation-details .second-point-details,
+  #content-wrapper .display-area #add-point .points-details .second-point-details,
+  #content-wrapper .display-area #add-point .transformation-details .second-point-details,
+  #content-wrapper .display-area #angles-calc .points-details .second-point-details,
+  #content-wrapper .display-area #angles-calc .transformation-details .second-point-details,
+  #content-wrapper .display-area #transformation .points-details .second-point-details,
+  #content-wrapper .display-area #transformation .transformation-details .second-point-details {
+    margin-top: 3rem;
+  }
+  #content-wrapper .display-area #azimuth .coord-input,
+  #content-wrapper .display-area #distance .coord-input,
+  #content-wrapper .display-area #add-point .coord-input,
+  #content-wrapper .display-area #angles-calc .coord-input,
+  #content-wrapper .display-area #transformation .coord-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #content-wrapper .display-area #azimuth .coord-input .coord-x,
+  #content-wrapper .display-area #azimuth .coord-input .coord-y,
+  #content-wrapper .display-area #distance .coord-input .coord-x,
+  #content-wrapper .display-area #distance .coord-input .coord-y,
+  #content-wrapper .display-area #add-point .coord-input .coord-x,
+  #content-wrapper .display-area #add-point .coord-input .coord-y,
+  #content-wrapper .display-area #angles-calc .coord-input .coord-x,
+  #content-wrapper .display-area #angles-calc .coord-input .coord-y,
+  #content-wrapper .display-area #transformation .coord-input .coord-x,
+  #content-wrapper .display-area #transformation .coord-input .coord-y {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 640px) and (max-width: 375px) {
+  #top-bar {
+    width: 100%;
+  }
+  #top-bar h1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #top-bar h1 a {
+    font-size: 10px;
+  }
+  #top-bar h1 i {
+    margin: 0;
+  }
+  .display-area {
+    min-width: 100%;
+  }
+  .display-area #about-project {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+
+#add-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#add-point h2 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#add-point .point-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+  height: 100%;
+}
+
+#add-point .point-details label {
+  font-size: 20px;
+  margin: 2rem 0;
+}
+
+#add-point .point-details input {
+  height: 30px;
+  width: 400px;
+}
+
+#add-point .point-details button#add-point-btn {
+  margin-top: 3rem;
+  height: 30px;
+  width: 200px;
+}
+
+#azimuth,
+#distance {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#azimuth h2,
+#distance h2 {
+  margin-bottom: 3rem;
+}
+
+#azimuth .points-details,
+#distance .points-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#azimuth .points-details .first-point-details,
+#azimuth .points-details .second-point-details,
+#distance .points-details .first-point-details,
+#distance .points-details .second-point-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#azimuth .points-details .first-point-details label,
+#azimuth .points-details .second-point-details label,
+#distance .points-details .first-point-details label,
+#distance .points-details .second-point-details label {
+  margin: 1rem 0;
+}
+
+#azimuth .points-details .first-point-details input,
+#azimuth .points-details .second-point-details input,
+#distance .points-details .first-point-details input,
+#distance .points-details .second-point-details input {
+  height: 30px;
+  width: 200px;
+}
+
+#azimuth button,
+#distance button {
+  margin-top: 3rem;
+  height: 30px;
+  width: 120px;
+}
+
+#azimuth .result,
+#distance .result {
+  margin: 3rem 0;
+}
+
+#angles-calc,
+#transformation {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  overflow: scroll;
+}
+
+#angles-calc h2,
+#transformation h2 {
+  margin-bottom: 3rem;
+}
+
+#angles-calc .coord-input,
+#transformation .coord-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#angles-calc .coord-input .coord-x,
+#angles-calc .coord-input .coord-y,
+#transformation .coord-input .coord-x,
+#transformation .coord-input .coord-y {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 2rem;
+}
+
+#angles-calc .coord-input .coord-x input,
+#angles-calc .coord-input .coord-y input,
+#transformation .coord-input .coord-x input,
+#transformation .coord-input .coord-y input {
+  margin-top: 1rem;
+}
+
+#angles-calc .angles-details,
+#angles-calc .transformation-details,
+#transformation .angles-details,
+#transformation .transformation-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#angles-calc .angles-details .result,
+#angles-calc .transformation-details .result,
+#transformation .angles-details .result,
+#transformation .transformation-details .result {
+  text-align: center;
+  margin: 3rem 0.8rem;
+  font-size: 18px;
+  color: green;
+}
+
+#angles-calc .angles-details .angle-choice,
+#angles-calc .angles-details .transformation-choice,
+#angles-calc .transformation-details .angle-choice,
+#angles-calc .transformation-details .transformation-choice,
+#transformation .angles-details .angle-choice,
+#transformation .angles-details .transformation-choice,
+#transformation .transformation-details .angle-choice,
+#transformation .transformation-details .transformation-choice {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#angles-calc .angles-details .angle-choice span,
+#angles-calc .angles-details .transformation-choice span,
+#angles-calc .transformation-details .angle-choice span,
+#angles-calc .transformation-details .transformation-choice span,
+#transformation .angles-details .angle-choice span,
+#transformation .angles-details .transformation-choice span,
+#transformation .transformation-details .angle-choice span,
+#transformation .transformation-details .transformation-choice span {
+  margin: 0 1rem;
+}
+
+#angles-calc .angles-details label,
+#angles-calc .transformation-details label,
+#transformation .angles-details label,
+#transformation .transformation-details label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#angles-calc .angles-details input,
+#angles-calc .transformation-details input,
+#transformation .angles-details input,
+#transformation .transformation-details input {
+  height: 30px;
+  width: 250px;
+}
+
+#angles-calc .angles-details button,
+#angles-calc .transformation-details button,
+#transformation .angles-details button,
+#transformation .transformation-details button {
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+
+#points-base-header {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#points-base {
+  text-align: center;
+}
+
+#points-base .points-list {
+  width: 100%;
+}
+
+#points-base .points-list table {
+  margin: 2rem auto 0 auto;
+  width: 98%;
+  border: 1px solid gray;
+  margin-bottom: 3rem;
+}
+
+#points-base .points-list table th {
+  background-color: #e3e3e3;
+  padding: 0.5rem 0;
+}
+
+#points-base .points-list table th:nth-last-child(2) {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+#points-base .points-list table td {
+  border-top: 1px solid gray;
+  padding: 0.5rem 0;
+}
+
+#points-base .points-list table td:nth-last-child(2) {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+#points-base .points-list table tr:hover {
+  background-color: #e3e3e3;
+}
+/*# sourceMappingURL=main.css.map */
